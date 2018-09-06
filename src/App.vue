@@ -3,20 +3,26 @@
 </template>
 
 <script>
-// import { get } from './utils/utils'
-import qcloud from 'wafer2-client-sdk'
-import config from './utils/config'
 export default {
   created () {
-    qcloud.setLoginUrl(config.loginUrl)
-    qcloud.login({
-      success: function (userInfo) {
-        console.log('登录成功', userInfo)
-      },
-      fail: function (err) {
-        console.log('登录失败', err)
-      }
-    })
   }
 }
 </script>
+
+<style lang="scss">
+.btn {
+  color: white;
+  background: #ea5a49;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-left: 15px;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+}
+.btn:active {
+  background: #fa5a49;
+}
+</style>
