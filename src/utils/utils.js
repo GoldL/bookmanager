@@ -19,6 +19,7 @@ function request (url, method, data, header = { }) {
         if (res.data.code === ERROK) {
           resolve(res.data.data)
         } else {
+          showModal('失败', res.data.data.msg)
           reject(res.data)
         }
       }

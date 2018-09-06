@@ -31,9 +31,10 @@ export default {
     async addBook (isbn) {
       const res = await post(addBookUrl, {
         isbn,
-        openid: this.userinfo.openId
+        openid: this.userInfo.openId
       })
-      showModal('添加成功', `${res.title}添加成功`)
+      console.log(res)
+      showModal('添加成功', `《${res.title}》添加成功`)
     },
     scanBook () {
       wx.scanCode({
