@@ -1,20 +1,28 @@
 <template>
-  <div>detail:{{bookid}}</div>
+  <div>
+    <book-info :info="info"></book-info>
+  </div>
 </template>
 <script>
 import { bookDetailUrl } from 'api/api'
 import { get } from 'utils/utils'
+import BookInfo from 'components/BookInfo'
 export default {
   name: 'Detail',
+  components: {
+    BookInfo
+  },
   data () {
     return {
-      bookid: ''
+      bookid: '',
+      info: {}
     }
   },
   methods: {
     async getDetail () {
       const info = await get(bookDetailUrl, { id: this.bookid })
-      console.log(info)
+      wx.setNavigationBarTitle({ title: info.title })
+      this.info = info
     }
   },
   mounted () {
