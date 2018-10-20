@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { post, showSuccess, showModal } from 'utils/utils'
+import { post, showSuccess, showModel } from 'utils/utils'
 import qcloud from 'wafer2-client-sdk'
 import { addBookUrl, loginUrl } from 'api/api'
 import YearProgress from 'components/YearProgress'
@@ -34,7 +34,7 @@ export default {
         openid: this.userInfo.openId
       })
       console.log(res)
-      showModal('添加成功', `《${res.title}》添加成功`)
+      showModel('添加成功', `《${res.title}》添加成功`)
     },
     scanBook () {
       wx.scanCode({

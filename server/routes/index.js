@@ -42,5 +42,9 @@ router.get('/booklist', controllers.booklist)
 router.get('/bookdetail', controllers.bookdetail)
 // 获取首页轮播列表
 router.get('/swiperlist', controllers.swiperlist)
+// 添加评论
+router.post('/addcomment', controllers.addcomment)
+// 获取评论列表
+router.get('/commentlist', controllers.commentlist)
 
 module.exports = router
