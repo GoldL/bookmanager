@@ -7,12 +7,14 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
-	"qcloudRoot": "./server/",
+	"miniprogramRoot": "dist/",
+	"qcloudRoot": "server/",
 	"compileType": "miniprogram",
 	"appid": "wx8cdc6fd91797a332",
 	"projectname": "bookmanager",
 	"libVersion": "2.2.0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

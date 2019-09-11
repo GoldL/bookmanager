@@ -16,7 +16,7 @@ export default {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#EA5149',
       navigationBarTitleText: 'iGolden图书管理',
-      navigationBarTextStyle: 'light'
+      navigationBarTextStyle: 'white'
     },
     tabBar: {
       selectedColor: '#EA5149',

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="userinfo" @click='login'>
+    <div class="userinfo" @click='login' v-if="canIUse" open-type="getUserInfo">
       <img :src="userInfo.avatarUrl">
       <p>{{userInfo.nickName}}</p>
     </div>
@@ -21,6 +21,7 @@ export default {
   },
   data () {
     return {
+      canIUse: wx.canIUse('button.open-type.getUserInfo'),
       userInfo: {
         avatarUrl: '../../../static/img/unlogin.png',
         nickName: '点击登录'
