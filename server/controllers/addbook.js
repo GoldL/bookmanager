@@ -19,7 +19,7 @@ module.exports = async ctx => {
       }
       return
     }
-    let url = 'https://api.douban.com/v2/book/isbn/' + isbn
+    let url = 'https://douban.uieee.com/v2/book/isbn/' + isbn
     const bookInfo = await getJSON(url)
     const rate = bookInfo.rating.average
     const {
