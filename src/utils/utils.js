@@ -19,7 +19,7 @@ function request (url, method, data, header = { }) {
         if (res.data.code === ERROK) {
           resolve(res.data.data)
         } else {
-          showModel('失败', res.data.data.msg)
+          showModal('失败', res.data.data.msg)
           reject(res.data)
         }
       }
@@ -34,8 +34,8 @@ export function showSuccess (text) {
   })
 }
 
-export function showModel (title, content) {
-  wx.showModel({
+export function showModal (title, content) {
+  wx.showModal({
     title,
     content,
     showCancel: false

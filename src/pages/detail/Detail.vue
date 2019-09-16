@@ -30,7 +30,7 @@
 <script>
 import { bookDetailUrl, baduMapUrl, addCommentUrl, commentlistUrl } from 'api/api'
 // import { baiduMapAK } from 'api/config'
-import { get, post, showModel } from 'utils/utils'
+import { get, post, showModal } from 'utils/utils'
 import BookInfo from 'components/BookInfo'
 import CommentList from 'components/CommentList'
 export default {
@@ -89,7 +89,7 @@ export default {
         this.comment = ''
         this.getComments()
       } catch (e) {
-        showModel('失败', e.msg)
+        showModal('失败', e.msg)
       }
     },
     getGeo (e) {
