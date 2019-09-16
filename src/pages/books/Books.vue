@@ -46,7 +46,6 @@ export default {
         // 上拉加载更多
         this.books = this.books.concat(data.list)
       }
-      this.books = data.list
       wx.hideNavigationBarLoading()
     },
     async getSwiperList () {
